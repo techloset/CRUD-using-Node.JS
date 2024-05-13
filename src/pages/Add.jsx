@@ -1,10 +1,11 @@
+import useAddTodo from "../hooks/useAddTodo.js";
+import CustomInput from "../components/CustomInput.jsx";
+import CustomTextArea from "../components/CustomTextArea.jsx";
 import React from "react";
-import useAddTodo from "../hooks/useAddTodo";
-import CustomInput from "../components/CustomInput";
-import CustomTextArea from "../components/CustomTextArea";
 
 function Add() {
   const { handleChange, handleSubmit } = useAddTodo();
+
   return (
     <div className="py-5">
       <div className="container">
