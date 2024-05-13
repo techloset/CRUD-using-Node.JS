@@ -1,5 +1,7 @@
 import React from "react";
-import useAddTodo from "../../hooks/useAddTodo";
+import useAddTodo from "../hooks/useAddTodo";
+import CustomInput from "../components/CustomInput";
+import CustomTextArea from "../components/CustomTextArea";
 
 function Add() {
   const { handleChange, handleSubmit } = useAddTodo();
@@ -16,30 +18,25 @@ function Add() {
           <div className="card p-3 p-md-4 mx-auto " style={{ maxWidth: 500 }}>
             <div className="row">
               <div className="col-12-col-md-6-mb-3">
-                <input
+                <CustomInput
                   type="text"
                   placeholder="Title"
                   name="title"
-                  className="form-control mb-3"
                   onChange={handleChange}
                 />
               </div>
               <div className="col-12-col-md-6-mb-3">
-                <input
-                  type="text"
+                <CustomInput
+                  type="placeholder"
                   placeholder="Location"
                   name="location"
-                  className="form-control mb-3"
                   onChange={handleChange}
                 />
-                <div className="col mb-3">
-                  <textarea
-                    name="description"
-                    placeholder="Description"
-                    className="form-control"
-                    onChange={handleChange}
-                  ></textarea>
-                </div>
+                <CustomTextArea
+                  name="description"
+                  placeholder="Description"
+                  onChange={handleChange}
+                />
                 <div className="col-12 col-md-6 offset-md-3 ">
                   <button className="btn btn-primary w-100">Add Todo</button>
                 </div>
