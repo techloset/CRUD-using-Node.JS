@@ -1,8 +1,10 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.scss";
+import "bootstrap/dist/js/bootstrap.bundle";
+import Add from "./pages/Add";
 
 function App() {
-  return <></>;
+  return <Add />;
 }
 
 export default App;
