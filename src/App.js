@@ -1,8 +1,10 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.scss";
+import "bootstrap/dist/js/bootstrap.bundle";
+import Todos from "./pages/Todos";
 
 function App() {
-  return <></>;
+  return <Todos />;
 }
 
 export default App;
